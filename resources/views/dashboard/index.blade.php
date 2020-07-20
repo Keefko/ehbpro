@@ -50,6 +50,8 @@
                             <div class="post-description">
                                 <p>{!! $mail->text !!}</p>
                             </div>
+
+
                         </div>
                     </div>
                     @endforeach
