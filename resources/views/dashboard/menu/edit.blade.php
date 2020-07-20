@@ -1,0 +1,39 @@
+@extends('master')
+@section('title', 'Navigácia')
+
+<body class="adminBody">
+@section('content')
+    @if(\Illuminate\Support\Facades\Auth::check())
+        <div class="wrapper">
+            @include('dashboard.partials._menu')
+            <div class="main_container">
+                <h1 class="pt-4 pb-2"><b>Upraviť položku navigácie</b></h1>
+                <a href="{{ url('dashboard/menu') }}" class="text-dark">Späť na navigáciu</a>
+                @include('dashboard.partials._messages')
+                <div class="item mt-2">
+
+                        {!!  \Collective\Html\FormFacade::open(['action' =>['MenuController@update', $menu->id], 'method' => 'PUT'])  !!}
+                        @csrf
+
+                        <div class="form-group">
+                            {{ \Collective\Html\FormFacade::label('title', 'Text', ['class' => 'form-control-label']) }}
+                            {{ \Collective\Html\FormFacade::text('title', $menu->text, ['class' => 'form-control', 'required' => 'true']) }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ \Collective\Html\FormFacade::label('url', 'Url', ['class' => 'form-control-label']) }}
+                            {{ \Collective\Html\FormFacade::text('url', $menu->url, ['class' => 'form-control','required' => 'true']) }}
+                        </div>
+
+                        <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
+
+                        {!! \Collective\Html\FormFacade::close() !!}
+
+                </div>
+            </div>
+        </div>
+
+
+    @endif
+@endsection
+</body>
