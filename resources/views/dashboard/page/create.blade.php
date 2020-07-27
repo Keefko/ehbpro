@@ -41,6 +41,8 @@
             </div>
         </div>
 </body>
+@else
+    <script>window.location = "/";</script>
 @endif
 @endsection
 

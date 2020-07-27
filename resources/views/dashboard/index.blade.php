@@ -59,8 +59,8 @@
         </div>
     </div>
 
-@else
-    {{url('/')}}
+        @else
+            <script>window.location = "/";</script>
 @endif
 @endsection
 </body>

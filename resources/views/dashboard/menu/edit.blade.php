@@ -33,7 +33,8 @@
             </div>
         </div>
 
-
+    @else
+        <script>window.location = "/";</script>
     @endif
 @endsection
 </body>
