@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8d2ebea-be92-4946-a97c-3db428c3b7ff" name="Default Changelist" comment="" />
+    <list default="true" id="e8d2ebea-be92-4946-a97c-3db428c3b7ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +146,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1drLKWlTPhQkj83zpntyx0ajOE8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -197,12 +201,15 @@
       <workItem from="1593793760746" duration="141050000" />
       <workItem from="1595249771503" duration="6143000" />
       <workItem from="1595533245819" duration="12186000" />
-      <workItem from="1595777745899" duration="1579000" />
+      <workItem from="1595777745899" duration="1938000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2364" y="97" key="#Deployment" timestamp="1595538401484">
