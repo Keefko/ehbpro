@@ -13,31 +13,16 @@
 
         <div class="row pt-4 services">
             <?php $count = 1; ?>
+
             @foreach($service as $item)
-                {{count($service)}}
-            <div class="col-md-3 col-sm-6 col-xs-12 single-box">
 
-                    <h2>0{{ $count }}</h2>
-
-                <style>
-                    #service .services .single-box:nth-child({{$count}} ){
-                        background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
-                        background-size:cover;
-                        height: 350px;
-                    }
-
-                    #service .services .single-box:hover{
-                        background: #e3e3e3;
-                    }
-
-                </style>
-
-                    <?php $count++ ?>
-                    <h3>{{$item->title}}</h3>
-                    <p>{!! $item->text !!}</p>
-            </div>
-
-
+                    @if(count($service) % 2 == 0 && count($service) % 4 == 0)
+                        @include('partials._servicefour')
+                    @elseif(count($service) % 2 == 0)
+                        @include('partials._servicetwo')
+                    @elseif(count($service) % 3 == 0)
+                        @include('partials._servicethree')
+                    @endif
             @endforeach
         </div>
     </div>
