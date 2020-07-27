@@ -59,7 +59,8 @@
         </div>
     </div>
 
-
+@else
+    {{url('/')}}
 @endif
 @endsection
 </body>

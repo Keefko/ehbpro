@@ -33,7 +33,7 @@ class MenuController extends Controller
         $menu->url = $request->input('url');
         $menu->save();
 
-        return redirect()->back()->with('succes', 'Položka úspešne pridaná');
+        return redirect()->back()->with('success', 'Položka úspešne pridaná');
     }
 
 
@@ -63,13 +63,13 @@ class MenuController extends Controller
         $menu->url = $request->input('url');
         $menu->save();
 
-        return redirect()->back()->with('succes', 'Položka úspešne pridaná');
+        return redirect()->back()->with('success', 'Položka úspešne upravená');
     }
 
     public function destroy($id)
     {
         $menu = Menu::find($id);
         $menu->delete();
-        return redirect()->back()->with('succes', 'Položka úspešne zmazaná');
+        return redirect()->back()->with('success', 'Položka úspešne zmazaná');
     }
 }
