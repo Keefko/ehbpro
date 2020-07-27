@@ -9,7 +9,7 @@
         <ul class="navbar-nav ml-auto">
                 @foreach($menu as $item)
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ehbpro/ehbpro/public/{{$item->url}}">{{$item->text}}</a>
+                        <a class="nav-link" href="{{$item->url}}">{{$item->text}}</a>
                     </li>
                 @endforeach
                     @if(\Illuminate\Support\Facades\Auth::check())

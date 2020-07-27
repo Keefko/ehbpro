@@ -14,7 +14,7 @@
         <div class="row pt-4 services">
             <?php $count = 1; ?>
             @foreach($service as $item)
-
+                {{count($service)}}
             <div class="col-md-3 col-sm-6 col-xs-12 single-box">
 
                     <h2>0{{ $count }}</h2>

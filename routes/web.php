@@ -57,10 +57,6 @@ Route::get('/dashboard/service',function (){
     return view('dashboard.service');
 });
 
-Route::get('/dashboard/try',function (){
-    return view('dashboard.try');
-});
-
 Route::get('/dashboard/menu/create',function (){
     return view('dashboard.menu.create');
 });
