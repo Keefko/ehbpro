@@ -17,11 +17,71 @@
             @foreach($service as $item)
 
                     @if(count($service) % 2 == 0 && count($service) % 4 == 0)
-                        @include('partials._servicefour')
+                        <div class="col-md-3 col-sm-6 col-xs-12 single-box">
+
+                            <h2>0{{ $count }}</h2>
+
+                            <style>
+                                #service .services .single-box:nth-child({{$count}} ){
+                                    background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
+                                    background-size:cover;
+                                    height: 350px;
+                                }
+
+                                #service .services .single-box:hover{
+                                    background: #e3e3e3;
+                                }
+
+                            </style>
+
+                            <?php $count++ ?>
+                            <h3>{{$item->title}}</h3>
+                            <p>{!! $item->text !!}</p>
+                        </div>
                     @elseif(count($service) % 2 == 0)
-                        @include('partials._servicetwo')
+                        <div class="col-md-6 col-sm-6 col-xs-12 single-box">
+
+                            <h2>0{{ $count }}</h2>
+
+                            <style>
+                                #service .services .single-box:nth-child({{$count}} ){
+                                    background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
+                                    background-size:cover;
+                                    height: 350px;
+                                }
+
+                                #service .services .single-box:hover{
+                                    background: #e3e3e3;
+                                }
+
+                            </style>
+
+                            <?php $count++ ?>
+                            <h3>{{$item->title}}</h3>
+                            <p>{!! $item->text !!}</p>
+                        </div>
                     @elseif(count($service) % 3 == 0)
-                        @include('partials._servicethree')
+                        <div class="col-md-4 col-sm-6 col-xs-12 single-box">
+
+                            <h2>0{{ $count }}</h2>
+
+                            <style>
+                                #service .services .single-box:nth-child({{$count}} ){
+                                    background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
+                                    background-size:cover;
+                                    height: 350px;
+                                }
+
+                                #service .services .single-box:hover{
+                                    background: #e3e3e3;
+                                }
+
+                            </style>
+
+                            <?php $count++ ?>
+                            <h3>{{$item->title}}</h3>
+                            <p>{!! $item->text !!}</p>
+                        </div>
                     @endif
             @endforeach
         </div>
