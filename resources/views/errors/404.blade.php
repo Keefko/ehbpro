@@ -3,7 +3,6 @@
 
 
 @section('content')
-    @include('.partials/_menu')
     <main>
         <div class="container">
             <div class="row">
