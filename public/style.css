@@ -227,7 +227,10 @@ ul.nav.navbar-nav > li > a {
 }
 
 
-
+.not-found h1 {
+    color: #3e3d3d;
+    font-size: 30px;
+}
 
 /* custom */
 
@@ -346,7 +349,6 @@ ul.nav.navbar-nav > li > a {
 #service .single-box:hover p {
     opacity: 1;
 }
-
 
 
 .box{

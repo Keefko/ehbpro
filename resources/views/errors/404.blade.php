@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <div class="container">
+        <div class="container pt-5">
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -261,13 +261,22 @@
                         </g>
                     </svg>
                 </div>
-                <div class="col-md-6 align-self-center">
+                <div class="col-md-6 align-self-center not-found">
                     <h1>404</h1>
                     <h2>OH NIE! STRÁNKA NEBOLA NÁJDENÁ</h2>
                     <p>Stránka ktorú ste zadali neexistuje. Kliknite dole na tlačitko
                         a budete presmerovaný na hlavnú stránku.
                     </p>
-                    <button class="btn btn-custom">Domov</button>
+                    <button class="btn btn-custom" id="redirect">Domov</button>
+
+                    <script>
+                        $(document).ready(function () {
+                            $("#redirect").on('click', function () {
+                                window.location = "/";
+                            })
+                        })
+                    </script>
+
                 </div>
             </div>
         </div>
