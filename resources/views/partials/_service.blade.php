@@ -39,26 +39,31 @@
                             <p>{!! $item->text !!}</p>
                         </div>
                     @elseif(count($service) % 2 == 0)
-                        <div class="col-md-6 col-sm-6 col-xs-12 single-box">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6 service-image">
+                                    <style>
+                                        #service .services .service-image:nth-child({{$count}} ) {
+                                            background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
+                                            background-size:cover;
+                                            height: 350px;
+                                        }
 
-                            <h2>0{{ $count }}</h2>
+                                        #service .services .service-two p{
+                                            display: block;
+                                        }
+                                    </style>
+                                </div>
+                                <div class="col-md-6 service-two">
+                                    <h2>0{{ $count }}</h2>
 
-                            <style>
-                                #service .services .single-box:nth-child({{$count}} ){
-                                    background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
-                                    background-size:cover;
-                                    height: 350px;
-                                }
+                                    <?php $count++ ?>
 
-                                #service .services .single-box:hover{
-                                    background: #e3e3e3;
-                                }
+                                    <h3>{{$item->title}}</h3>
+                                    <p>{!! $item->text !!}</p>
+                                </div>
+                            </div>
 
-                            </style>
-
-                            <?php $count++ ?>
-                            <h3>{{$item->title}}</h3>
-                            <p>{!! $item->text !!}</p>
                         </div>
                     @elseif(count($service) % 3 == 0)
                         <div class="col-md-4 col-sm-6 col-xs-12 single-box">
