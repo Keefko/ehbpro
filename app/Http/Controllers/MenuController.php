@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Menu;
+use App\Submenu;
 use Illuminate\Http\Request;
 
 
@@ -72,4 +73,10 @@ class MenuController extends Controller
         $menu->delete();
         return redirect()->back()->with('success', 'Položka úspešne zmazaná');
     }
+
+
+    public function getAllsubmenus($id){
+       return Submenu::where('parent', $id)->all();
+    }
+
 }

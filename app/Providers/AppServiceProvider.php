@@ -10,6 +10,7 @@ use App\Page;
 use App\Section;
 use App\Lists;
 use App\Service;
+use App\Submenu;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\ServiceProvider;
 
@@ -52,7 +53,6 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('partials._menu', function ($view) {
             $view->with('image', Image::findOrFail(1));
         });
-
 
         view()->composer('home', function ($view) {
             $view->with('image', Image::findOrFail(2));

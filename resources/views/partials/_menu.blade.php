@@ -7,7 +7,9 @@
 
     <div class="collapse navbar-collapse pr-4" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+
                 @foreach($menu as $item)
+                     {{var_dump( (new App\Http\Controllers\MenuController)->getAllsubmenus($item->id)}})
                     <li class="nav-item">
                         <a class="nav-link" href="{{$item->url}}">{{$item->text}}</a>
                     </li>
