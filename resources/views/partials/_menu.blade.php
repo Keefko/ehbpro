@@ -9,7 +9,7 @@
         <ul class="navbar-nav ml-auto">
 
                 @foreach($menu as $item)
-
+                    <?php print_r(\App\Http\Controllers\MenuController::getAllsubmenus(11));?>
                     <li class="nav-item">
                         <a class="nav-link" href="{{$item->url}}">{{$item->text}} </a>
                     </li>

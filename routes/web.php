@@ -26,6 +26,7 @@ Route::resource('service', 'ServiceController');
 Route::resource('page', 'PageController');
 Route::resource('image', 'ImageController');
 Route::resource('mail', 'MailController');
+Route::resource('submenu', 'SubmenuController');
 
 Route::get('/', function () {
     return view('home');
