@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d2ebea-be92-4946-a97c-3db428c3b7ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_28_174704_create_menu_submenu_pivot_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_26_195235_create_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_26_195235_create_menus_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_03_175956_create_about_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_03_175956_create_about_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_04_100724_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_04_100724_create_services_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_07_142944_create_sections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_07_142944_create_sections_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_10_203525_create_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_10_203525_create_lists_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_15_140444_create_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_15_140444_create_pages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_16_194606_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_16_194606_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_19_235629_create_mails_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_19_235629_create_mails_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_20_131329_create_submenus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_20_131329_create_submenus_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +214,7 @@
       <workItem from="1593793760746" duration="141050000" />
       <workItem from="1595249771503" duration="6143000" />
       <workItem from="1595533245819" duration="12186000" />
-      <workItem from="1595777745899" duration="17480000" />
+      <workItem from="1595777745899" duration="19110000" />
     </task>
     <servers />
   </component>
