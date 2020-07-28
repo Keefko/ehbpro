@@ -79,7 +79,7 @@ class MenuController extends Controller
 
     public function getSubmenu($id)
     {
-        $menu = Menu::findOrFail($id)->with('submenu')->get();
+        $menu = Menu::findOrFail($id)->with('submenus')->get();
 
         return $menu;
     }
