@@ -9,7 +9,7 @@
         <ul class="navbar-nav ml-auto">
 
                 @foreach($menu as $item)
-                    {{App\Submenu::find(1)}}
+                    {{$item->submenu}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{$item->url}}">{{$item->text}} </a>
                     </li>
