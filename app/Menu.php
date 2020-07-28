@@ -11,4 +11,8 @@ class Menu extends Model
     public $timestamps = false;
     private $text;
     private $url;
+
+    public function submenus(){
+        return $this->hasMany('App\Submenu');
+    }
 }
