@@ -18,6 +18,7 @@ class CreateSubmenusTable extends Migration
             $table->string('title');
             $table->string('url');
             $table->integer('order');
+            $table->foreign('parent');
         });
     }
 

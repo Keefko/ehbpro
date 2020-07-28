@@ -42,18 +42,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 service-box">
                             <div class="row">
                                 <div class="col-md-6 service-image">
-                                    <style>
-                                        #service .services .service-box:nth-child({{$count}}) service-image {
-                                            background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
-                                            background-size:cover;
-                                            height: 350px;
-                                        }
-
-                                        #service .services .service-two p{
-                                            font-size: 13px;
-                                            display: block;
-                                        }
-                                    </style>
+                                    <img src="{{asset('img/service/'.$item->img)}}">
                                 </div>
                                 <div class="col-md-6 service-two">
                                     <h2>0{{ $count }}</h2>

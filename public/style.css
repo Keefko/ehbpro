@@ -229,7 +229,8 @@ ul.nav.navbar-nav > li > a {
 
 .not-found h1 {
     color: #3e3d3d;
-    font-size: 30px;
+    font-size: 60px;
+    font-weight: bolder;
 }
 
 /* custom */
@@ -309,6 +310,18 @@ ul.nav.navbar-nav > li > a {
     font-size: 30px;
     color: #444444;
     font-weight: bolder;
+}
+
+#service .services .service-image img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 350px;
+}
+
+#service .services .service-two p{
+    font-size: 13px;
+    display: block;
 }
 
 #service .single-box h3{
