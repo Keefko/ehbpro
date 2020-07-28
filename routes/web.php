@@ -46,6 +46,9 @@ Route::get('/dashboard/page',function (){
     return view('dashboard.page');
 });
 
+Route::get('/getSubmenu/{id}', 'MenuController@getSubmenu')->name('getSubmenu');
+
+
 Route::get('/dashboard/menu',function (){
     return view('dashboard.menu');
 });
