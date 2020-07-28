@@ -292,7 +292,21 @@ ul.nav.navbar-nav > li > a {
 
 }
 
+#service .service-two {
+    background: white;
+}
 
+#service .service-two h3{
+    color: #040404;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#service .service-two h2 {
+    font-size: 30px;
+    color: #444444;
+    font-weight: bolder;
+}
 
 #service .single-box h3{
     font-size: 18px;

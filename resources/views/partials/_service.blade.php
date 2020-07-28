@@ -41,15 +41,16 @@
                     @elseif(count($service) % 2 == 0)
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="row">
-                                <div class="col-md-6 service-image">
+                                <div class="col-md-6 service-image-{{$count}}">
                                     <style>
-                                        #service .services .service-image:nth-child({{$count}} ) {
+                                        #service .services .service-image-({{$count}} ) {
                                             background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
                                             background-size:cover;
                                             height: 350px;
                                         }
 
                                         #service .services .service-two p{
+                                            font-size: 13px;
                                             display: block;
                                         }
                                     </style>
