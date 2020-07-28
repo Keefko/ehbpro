@@ -54,6 +54,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('image', Image::findOrFail(1));
         });
 
+
         view()->composer('home', function ($view) {
             $view->with('image', Image::findOrFail(2));
         });
