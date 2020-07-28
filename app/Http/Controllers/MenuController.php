@@ -41,7 +41,9 @@ class MenuController extends Controller
     public function show($id)
     {
         $menu = Menu::findOrFail($id);
-        return view('menu.show')->with('menu', $menu);
+
+        return $menu->submenus;
+
     }
 
 
