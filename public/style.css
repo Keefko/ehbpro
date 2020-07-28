@@ -297,7 +297,9 @@ ul.nav.navbar-nav > li > a {
 }
 
 #service .service-two {
+    padding: 10px;
     background:  #f5f4f4;
+    margin-left: -15px;
 }
 
 #service .service-two h3{
