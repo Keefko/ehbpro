@@ -304,6 +304,7 @@ ul.nav.navbar-nav > li > a {
 #service .service-two {
     padding: 20px;
     background:  #f5f4f4;
+    margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 992px) {
