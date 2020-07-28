@@ -9,9 +9,8 @@
         <ul class="navbar-nav ml-auto">
 
                 @foreach($menu as $item)
-                {{var_dump( (new App\Http\Controllers\MenuController)->getAllsubmenus($item->id))}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{$item->url}}">{{$item->text}}</a>
+                        <a class="nav-link" href="{{$item->url}}">{{$item->text}} </a>
                     </li>
                 @endforeach
                     @if(\Illuminate\Support\Facades\Auth::check())
