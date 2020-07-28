@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.0",
         "spatie/laravel-analytics": "^3.10",
-        "unisharp/laravel-filemanager": "^2.1"
+        "unisharp/laravel-filemanager": "^2.1",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

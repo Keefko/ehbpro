@@ -76,7 +76,7 @@ class MenuController extends Controller
 
 
     public function getSubmenu($id){
-       $submenus = Submenu::where('parent', $id)->orderBy('order');
+       $submenus = Submenu::where('parent', $id)->orderBy('order', 'DESC');
        return json_encode($submenus);
     }
 
