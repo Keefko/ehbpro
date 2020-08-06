@@ -1,7 +1,7 @@
 
 
 
-<section id="aditional" class="mb-5">
+<section id="aditional" class="pt-5 mb-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">

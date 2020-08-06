@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d2ebea-be92-4946-a97c-3db428c3b7ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/_service.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_service.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +204,7 @@
       <workItem from="1595249771503" duration="6143000" />
       <workItem from="1595533245819" duration="12186000" />
       <workItem from="1595777745899" duration="23122000" />
-      <workItem from="1596738734704" duration="869000" />
+      <workItem from="1596738734704" duration="1314000" />
     </task>
     <servers />
   </component>
