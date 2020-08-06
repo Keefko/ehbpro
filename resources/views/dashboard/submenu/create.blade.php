@@ -13,7 +13,7 @@
                 @include('dashboard.partials._messages')
                 <div class="item mt-2">
 
-                    {!!  \Collective\Html\FormFacade::open(['action' =>['SubmenuController@store',$id] ,'method' => 'POST'])  !!}
+                    {!!  \Collective\Html\FormFacade::open(['action' =>'SubmenuController@store' ,'method' => 'POST'])  !!}
                     @csrf
                     <div class="form-group">
                         {{ \Collective\Html\FormFacade::label('title', 'Názov', ['class' => 'form-control-label']) }}
@@ -24,6 +24,7 @@
                         {{ \Collective\Html\FormFacade::label('url', 'Url' , ['class' => 'form-control-label']) }}
                         {{ \Collective\Html\FormFacade::text('url', '', ['class' => 'form-control description']) }}
                     </div>
+                    {!! \Collective\Html\FormFacade::hidden('id', $id) !!}
 
                     <button type="submit" class="btn pl-3 btn-custom mt-2 mb-2">Vytvoriť stránku</button>
                     {!! \Collective\Html\FormFacade::close() !!}

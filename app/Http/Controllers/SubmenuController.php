@@ -13,13 +13,14 @@ class SubmenuController extends Controller
         return view('dashboard.submenu.create')->with('id',$id);
     }
 
-    public function store(Request $request, $id){
+    public function store(Request $request){
 
         $this->validate($request, [
             'title' => 'required',
             'url' => 'required',
         ]);
 
+        $id = $request->input('id');
         $menu = Menu::findOrFail($id);
         $submenu = new Submenu();
         $submenu->title = $request->input('title');
@@ -31,18 +32,17 @@ class SubmenuController extends Controller
         return redirect()->back()->with('success', 'Podmenu bolo úspešne pridané');
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request,$id){
         $this->validate($request, [
             'title' => 'required',
             'url' => 'required',
         ]);
 
-        $menu = Menu::findOrFail($id);
-        $submenu = new Submenu();
+        $submenu = Submenu::findOrFail($id);
         $submenu->title = $request->input('title');
         $submenu->url = $request->input('url');
-        $submenu->order = count($menu->submenus) + 1;
-        $submenu->parent = $id;
+        $submenu->order = $request->input('order');
+        $submenu->parent = $request->input('id');
         $submenu->save();
 
         return redirect()->back()->with('success', 'Podmenu bolo úspešne upravené');
