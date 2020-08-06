@@ -59,7 +59,7 @@
                $('.wrapper').toggleClass("toggle");
             });
 
-            $('ul.nav li.dropdown a.nav-link').hover(function() {
+            $('ul.navbar li.nav-item.dropdown a#navbarDropdown.nav-link').hover(function() {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
             }, function() {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
