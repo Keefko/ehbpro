@@ -12,8 +12,8 @@
                 <a href="{{ url('dashboard/menu') }}" class="text-dark">Späť na navigáciu</a>
                 @include('dashboard.partials._messages')
                 <div class="item mt-2">
-                    {{$id}}
-                    {!!  \Collective\Html\FormFacade::open(['action' =>'SubmenuController@store' ,'method' => 'POST'])  !!}
+
+                    {!!  \Collective\Html\FormFacade::open(['action' =>['SubmenuController@store',$id] ,'method' => 'POST'])  !!}
                     @csrf
                     <div class="form-group">
                         {{ \Collective\Html\FormFacade::label('title', 'Názov', ['class' => 'form-control-label']) }}
