@@ -19,14 +19,12 @@
                                         <h5 class="card-title">{{ $item->text}}</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">{{$item->url}}</h6>
                                         @if(count($item->submenus) > 0)
-                                            <ul>
-                                                @foreach($item->submenus as $submenu)
-                                                    <li class="nav-link">{{$submenu->title. ' ' . $submenu->order}}</li>
-                                                @endforeach
-                                            </ul>
+                                            @foreach($item->submenus as $submenu)
+                                                <h6 class="nav-link">{{$submenu->title. ' ' . $submenu->order}}</h6>
+                                            @endforeach
                                         @endif
                                         <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
-                                        <a href="{{url('submenu/create)}}" class="btn btn-custom">Upraviť</a>
+                                        <a href="{{url('submenu/create'}}" class="btn btn-custom">Pridať submenu</a>
                                         @csrf()
                                         {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
                                         {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
