@@ -9,9 +9,23 @@
         <ul class="navbar-nav ml-auto">
 
                 @foreach($menu as $item)
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{$item->url}}">{{$item->text}} </a>
-                    </li>
+
+                    @if(count($item->submenus) > 0)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{$item->text}}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach($item->submenus as $submenu)
+                                    <a class="dropdown-item" href="{{$submenu->url}}">{{$submenu->title}}</a>
+                                @endforeach
+                            </div>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{$item->url}}">{{$item->text}} </a>
+                        </li>
+                    @endif
                 @endforeach
                     @if(\Illuminate\Support\Facades\Auth::check())
                         <li class="nav-item">
