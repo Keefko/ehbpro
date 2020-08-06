@@ -21,7 +21,9 @@
                                         <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
                                         @if(count($item->submenus) > 0)
                                             <ul>
-                                                <li>{{$item->title. ' ' . $item->order}}</li>
+                                                @foreach($item->submenus as $submenu)
+                                                    <li class="nav-link">{{$submenu->title. ' ' . $submenu->order}}</li>
+                                                @endforeach
                                             </ul>
                                         @endif
                                         @csrf()
