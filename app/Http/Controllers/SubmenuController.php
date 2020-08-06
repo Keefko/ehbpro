@@ -9,6 +9,10 @@ class SubmenuController extends Controller
 
     public function store(Request $request){
 
+        $this->validate($request, [
+            'title' => 'required',
+            'url' => 'required',
+        ]);
     }
 
     public function update(Request $request, $id){

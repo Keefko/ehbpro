@@ -28,8 +28,30 @@
                         <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
 
                         {!! \Collective\Html\FormFacade::close() !!}
-
                 </div>
+                @if(count($menu->submenus) > 0)
+                    <div class="item mt-2">
+                        @foreach($menu->submenus as $submenu)
+                            {!!  \Collective\Html\FormFacade::open(['action' =>['SubmenuController@update', $submenu->id], 'method' => 'PUT'])  !!}
+                            @csrf
+
+                            <div class="form-group">
+                                {{ \Collective\Html\FormFacade::label('title', 'Text', ['class' => 'form-control-label']) }}
+                                {{ \Collective\Html\FormFacade::text('title', $submenu->title, ['class' => 'form-control', 'required' => 'true']) }}
+                            </div>
+
+                            <div class="form-group">
+                                {{ \Collective\Html\FormFacade::label('url', 'Url', ['class' => 'form-control-label']) }}
+                                {{ \Collective\Html\FormFacade::text('url', $submenu->url, ['class' => 'form-control','required' => 'true']) }}
+                            </div>
+
+                            <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
+
+                            {!! \Collective\Html\FormFacade::close() !!}
+                        @endforeach
+                    </div>
+                @endif
+
             </div>
         </div>
 
