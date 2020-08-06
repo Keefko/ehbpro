@@ -19,6 +19,11 @@
                                         <h5 class="card-title">{{ $item->text}}</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">{{$item->url}}</h6>
                                         <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
+                                        @if(count($item->submenus) > 0)
+                                            <ul>
+                                                <li>{{$item->title. ' ' . $item->order}}</li>
+                                            </ul>
+                                        @endif
                                         @csrf()
                                         {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
                                         {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
