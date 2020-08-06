@@ -26,7 +26,7 @@
                     </div>
                     {!! \Collective\Html\FormFacade::hidden('id', $id) !!}
 
-                    <button type="submit" class="btn pl-3 btn-custom mt-2 mb-2">Vytvoriť stránku</button>
+                    <button type="submit" class="btn pl-3 btn-custom mt-2 mb-2">Vytvoriť podmenu</button>
                     {!! \Collective\Html\FormFacade::close() !!}
                 </div>
             </div>

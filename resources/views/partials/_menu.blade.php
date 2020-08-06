@@ -12,7 +12,7 @@
 
                     @if(count($item->submenus) > 0)
                         <li class="nav-item dropdown">
-                            <a class="dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-hover="dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-hover="dropdown">
                                 {{$item->text}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
