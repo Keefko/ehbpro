@@ -24,7 +24,7 @@
                                             @endforeach
                                         @endif
                                         <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
-                                        <a href="{{url('submenu/create')}}" class="btn btn-custom">Pridať submenu</a>
+                                        <a href="{{{url('submenu/create/'.$item->id)}}}" class="btn btn-custom">Pridať submenu</a>
                                         @csrf()
                                         {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
                                         {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
