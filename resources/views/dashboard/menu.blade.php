@@ -12,32 +12,42 @@
                 @include('dashboard.partials._messages')
                 <div class="item mt-2">
                     <div class="row">
-                        @foreach($menu as $item)
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $item->text}}</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">{{$item->url}}</h6>
+
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Url</th>
+                                    <th scope="col"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($menu as $item)
+                                        <tr>
+                                            <th scope="row"> <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">{{ $item->text}}</a></th>
+                                            <td>{{$item->url}}</td>
+                                            <td>                                        @csrf()
+                                                {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
+                                                {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
+                                                {!! \Collective\Html\FormFacade::close() !!}</td>
+                                        </tr>
                                         @if(count($item->submenus) > 0)
                                             @foreach($item->submenus as $submenu)
-                                                <h6 class="nav-link">{{$submenu->title. ' ' . $submenu->order}}</h6>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>{{$submenu->title}}</td>
+                                                    <td>{{$submenu->url}}</td>
+                                                </tr>
                                             @endforeach
                                         @endif
-                                        <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
-                                        <a href="{{{url('submenu/create/'.$item->id)}}}" class="btn btn-custom">Pridať submenu</a>
-                                        @csrf()
-                                        {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
-                                        {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
-                                        {!! \Collective\Html\FormFacade::close() !!}
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </ul>
+
+                                    @endforeach
+                                </tbody>
+                            </table>
+                    </div>
                 </div>
             </div>
         </div>
-
             @else
                 <script>window.location = "/";</script>
     @endif
