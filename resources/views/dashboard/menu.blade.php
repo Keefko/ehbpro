@@ -13,7 +13,7 @@
                 <div class="item mt-2">
                     <div class="row">
 
-                            <table class="table">
+                            <table class="table table-responsive-sm">
                                 <thead>
                                 <tr>
                                     <th scope="col">Title</th>
@@ -36,7 +36,7 @@
                                         @if(count($item->submenus) > 0)
                                             @foreach($item->submenus as $submenu)
                                                 <tr>
-                                                    <td>{{$submenu->order}}</td>
+                                                    <td></td>
                                                     <td>{{$submenu->title}}</td>
                                                     <td>{{$submenu->url}}</td>
                                                 </tr>

@@ -56,11 +56,11 @@
                     <a href="{{ url('dashboard/list/create') }}" class="mt-4 mb-2 btn btn-custom">Pridať novú službu</a>
                     <div class="row">
                         @foreach($list as $item)
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-2">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{'#'. $item->id .' '. $item->title}}</h5>
-                                        <a href="{{url('list/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
+
+                                        <a href="{{url('list/'. $item->id . '/edit')}}"><h5 class="card-title">{{'#'. $item->id .' '. $item->title}}</h5></a>
                                         @csrf()
                                         {!! \Collective\Html\FormFacade::open(['action' => ['ListController@destroy', $item->id], 'method' => 'DELETE']) !!}
                                         {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
