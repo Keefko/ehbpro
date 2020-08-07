@@ -227,6 +227,19 @@ ul.nav.navbar-nav > li > a {
 }
 
 
+.navbar .nav-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+
+
 .not-found h1 {
     color: #3e3d3d;
     font-size: 60px;
@@ -295,7 +308,6 @@ ul.nav.navbar-nav > li > a {
     margin: 10px 0px;
 
 }
-
 
 #service .services .service-image img {
     display: none;
