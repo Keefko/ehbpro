@@ -13,7 +13,7 @@
                 <div class="item mt-2">
                     <div class="row">
 
-                            <table class="table table-responsive">
+                            <table class="table">
                                 <thead>
                                 <tr>
                                     <th scope="col">Title</th>
@@ -24,17 +24,19 @@
                                 <tbody>
                                     @foreach($menu as $item)
                                         <tr>
-                                            <th scope="row"> <a href="{{url('menu/'. $item->id . '/edit')}}" class="btn btn-custom">{{ $item->text}}</a></th>
+                                            <th scope="row"><a href="{{url('menu/'. $item->id . '/edit')}}">{{ $item->text}}</a></th>
                                             <td>{{$item->url}}</td>
-                                            <td>                                        @csrf()
+                                            <td>
+                                                @csrf()
                                                 {!! \Collective\Html\FormFacade::open(['action' => ['MenuController@destroy', $item->id], 'method' => 'DELETE']) !!}
                                                 {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
-                                                {!! \Collective\Html\FormFacade::close() !!}</td>
+                                                {!! \Collective\Html\FormFacade::close() !!}
+                                            </td>
                                         </tr>
                                         @if(count($item->submenus) > 0)
                                             @foreach($item->submenus as $submenu)
                                                 <tr>
-                                                    <td></td>
+                                                    <td>{{$submenu->order}}</td>
                                                     <td>{{$submenu->title}}</td>
                                                     <td>{{$submenu->url}}</td>
                                                 </tr>
