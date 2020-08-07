@@ -13,22 +13,31 @@
                 @include('dashboard.partials._messages')
                 <div class="item mt-2">
                     <div class="row">
-                        @foreach($page as $item)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{'#'. $item->id .' '. $item->title}}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">{{$item->slug}}</h6>
-                                    <p class="card-text">{!! \Illuminate\Support\Str::words($item->text, 10) !!}</p>
-                                    <a href="{{url('page/'. $item->id . '/edit')}}" class="btn btn-custom">Upraviť</a>
-                                    @csrf()
-                                    {!! \Collective\Html\FormFacade::open(['action' => ['PageController@destroy', $item->id], 'method' => 'DELETE']) !!}
-                                    {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
-                                    {!! \Collective\Html\FormFacade::close() !!}
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
+                        <table class="table table-responsive-sm">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Názov</th>
+                                <th scope="col">Url</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                             @foreach($page as $item)
+                                 <tr>
+                                     <td>{{$item->id}}</td>
+                                     <td><a href="{{url('page/'. $item->id . '/edit')}}">{{$item->title}}</a></td>
+                                     <td class="text-muted">{{$item->slug}}</td>
+                                     <td>
+                                         @csrf()
+                                         {!! \Collective\Html\FormFacade::open(['action' => ['PageController@destroy', $item->id], 'method' => 'DELETE']) !!}
+                                         {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
+                                         {!! \Collective\Html\FormFacade::close() !!}
+                                     </td>
+                                 </tr>
+                             @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

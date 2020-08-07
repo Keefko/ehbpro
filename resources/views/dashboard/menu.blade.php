@@ -14,7 +14,7 @@
                     <div class="row">
 
                             <table class="table table-responsive-sm">
-                                <thead>
+                                <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Title</th>
                                     <th scope="col">Url</th>

@@ -5,10 +5,10 @@
         <h1>{{$section->title}}</h1>
         <h6>{{$section->sub_title}}</h6>
         <div class="row">
-             <div class="col-md-5 pt-3">
+             <div class="col-md-5 pt-3" data-aos="fade-up-right">
                  <p>{!! $section->text !!}</p>
              </div>
-            <div class="col-md-7">
+            <div class="col-md-7" data-aos="fade-up-left">
                 {!!  \Collective\Html\FormFacade::open(['action' => 'MailController@postContact', 'method' => 'POST'])  !!}
                 <div class="row">
                     <div class="col-md-6">

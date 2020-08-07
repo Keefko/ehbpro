@@ -1,11 +1,11 @@
 <section id="service" class="pt-5">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-3">
+            <div class="col-md-3" data-aos="fade-right">
                 <h1>{{$section->title}}</h1>
                 <h6>{{$section->sub_title}}</h6>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" data-aos="fade-left">
                 <p>{!! $section->text !!}</p>
             </div>
         </div>
@@ -17,7 +17,7 @@
             @foreach($service as $item)
 
                     @if(count($service) % 2 == 0 && count($service) % 4 == 0)
-                        <div class="col-md-3 col-sm-6 col-xs-12 single-box">
+                        <div class="col-md-3 col-sm-6 col-xs-12 single-box" data-aos="flip-up">
 
                             <h2>0{{ $count }}</h2>
 
@@ -39,7 +39,7 @@
                             <p>{!! $item->text !!}</p>
                         </div>
                     @elseif(count($service) % 2 == 0)
-                        <div class="col-md-6 col-sm-6 col-xs-12 service-box">
+                        <div class="col-md-6 col-sm-6 col-xs-12 service-box" data-aos="flip-up">
                             <div class="row">
                                 <div class="col-md-6 service-image">
                                     <img src="{{asset('img/service/'.$item->img)}}">
@@ -56,7 +56,7 @@
 
                         </div>
                     @elseif(count($service) % 3 == 0)
-                        <div class="col-md-4 col-sm-6 col-xs-12 single-box">
+                        <div class="col-md-4 col-sm-6 col-xs-12 single-box" data-aos="flip-up">
 
                             <h2>0{{ $count }}</h2>
 
