@@ -50,6 +50,7 @@ class SubmenuController extends Controller
 
     public function destroy($id){
         $submenu = Submenu::findOrFail($id);
+        $submenu->menu()->detach();
         $submenu->delete();
         return redirect()->back()->with('success', 'Podmenu bolo úspešne zmazané');
     }

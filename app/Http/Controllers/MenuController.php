@@ -72,6 +72,7 @@ class MenuController extends Controller
     public function destroy($id)
     {
         $menu = Menu::find($id);
+        $menu->submenus()->detach();
         $menu->delete();
         return redirect()->back()->with('success', 'Položka úspešne zmazaná');
     }

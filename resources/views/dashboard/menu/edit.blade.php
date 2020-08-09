@@ -74,14 +74,10 @@
                                 {{ \Collective\Html\FormFacade::text('url', $submenu->url, ['class' => 'form-control','required' => 'true']) }}
                             </div>
 
-                            <div>
-                                <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
-                                <div class="arrow-up"></div>
-                                <div class="arrow-down"></div>
-                            </div>
+                            <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
                             {!! \Collective\Html\FormFacade::close() !!}
+                        </div>
                         @endforeach
-                    </div>
                 @endif
 
             </div>
