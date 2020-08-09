@@ -5,7 +5,7 @@
                 <h1>{{$section->title}}</h1>
                 <h6>{{$section->sub_title}}</h6>
             </div>
-            <div class="col-md-9" data-aos="fade-left">
+            <div class="col-md-9" data-aos="fade-down">
                 <p>{!! $section->text !!}</p>
             </div>
         </div>

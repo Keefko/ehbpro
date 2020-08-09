@@ -13,7 +13,7 @@
                 <div class="item mt-2">
                     <div class="row">
 
-                            <table class="table table-responsive-sm">
+                            <table class="table">
                                 <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Title</th>
