@@ -30,8 +30,38 @@
                         {!! \Collective\Html\FormFacade::close() !!}
                 </div>
                 @if(count($menu->submenus) > 0)
-                    <div class="item mt-2">
+                        <h3 class="pt-2"> Podmenu</h3>
+                        <button id="addMenu" class="btn btn-custom mt-2 mb-2">Pridať podmenu</button>
+                        <div id="submenu">
+                            <div class="item mt-2">
+
+                                {!!  \Collective\Html\FormFacade::open(['action' =>'SubmenuController@store' ,'method' => 'POST'])  !!}
+                                @csrf
+                                <div class="form-group">
+                                    {{ \Collective\Html\FormFacade::label('title', 'Názov', ['class' => 'form-control-label']) }}
+                                    {{ \Collective\Html\FormFacade::text('title', '', ['id' => 'title', 'class' => 'form-control', 'required' => 'true']) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ \Collective\Html\FormFacade::label('url', 'Url' , ['class' => 'form-control-label']) }}
+                                    {{ \Collective\Html\FormFacade::text('url', '', ['class' => 'form-control description']) }}
+                                </div>
+                                {!! \Collective\Html\FormFacade::hidden('id', $id) !!}
+
+                                <button type="submit" class="btn pl-3 btn-custom mt-2 mb-2">Vytvoriť podmenu</button>
+                                {!! \Collective\Html\FormFacade::close() !!}
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('#addMenu').click(function () {
+                                    $('#submenu').css('display','block') ;
+                                });
+                            });
+
+                        </script>
                         @foreach($menu->submenus as $submenu)
+                        <div class="item mt-2">
                             {!!  \Collective\Html\FormFacade::open(['action' =>['SubmenuController@update', $submenu->id], 'method' => 'PUT'])  !!}
                             @csrf
 
@@ -45,8 +75,11 @@
                                 {{ \Collective\Html\FormFacade::text('url', $submenu->url, ['class' => 'form-control','required' => 'true']) }}
                             </div>
 
-                            <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
-
+                            <div>
+                                <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
+                                <p>Up arrow: <i class="arrow up"></i></p>
+                                <p>Down arrow: <i class="arrow down"></i></p>
+                            </div>
                             {!! \Collective\Html\FormFacade::close() !!}
                         @endforeach
                     </div>
