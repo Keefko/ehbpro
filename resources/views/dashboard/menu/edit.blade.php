@@ -77,13 +77,13 @@
                             <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
-                                <button class="btn btn-dark" id="up"><i class="arrow-up"></i></button>
+                                <button class="btn btn-dark" id="up"><span class="arrow-up"></span></button>
                                 <b class="pl-2 pr-2">{{$submenu->order}}</b>
-                                <button class="btn btn-dark" id="down"><i class="arrow-down"></i></button>
-                                @csrf()
+                                <button class="btn btn-dark" id="down"><span class="arrow-down"></span></button>
+                                <button class="btn btn-custom mt-2">Vymazať</button>
+                            {{--    @csrf()
                                 {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@destroy', $submenu->id], 'method' => 'DELETE']) !!}
-                                {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom mt-2'])}}
-                                {!! \Collective\Html\FormFacade::close() !!}
+                                {!! \Collective\Html\FormFacade::close() !!}--}}
                             </div>
                         </div>
                         @endforeach

@@ -62,10 +62,10 @@
 
             $('ul.navbar-nav li.nav-item.dropdown a#navbarDropdown.nav-link').hover(
                     function() {
-                        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+                        $('.dropdown-menu').stop(true, true).delay(200).fadeIn();
                     },
                     function() {
-                        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+                        $('.dropdown-menu').stop(true, true).delay(200).fadeOut();
             });
 
             $('.dropdown-menu').hover(
