@@ -55,10 +55,9 @@
                         <script>
                             $(document).ready(function () {
                                 $('#addMenu').click(function () {
-                                    $('#submenu').css('display','block') ;
+                                    $('#submenu').css('display','block');
                                 });
                             });
-
                         </script>
                         @foreach($menu->submenus as $submenu)
                         <div class="item mt-2">
@@ -77,8 +76,8 @@
 
                             <div>
                                 <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
-                                <p>Up arrow: <i class="arrow up"></i></p>
-                                <p>Down arrow: <i class="arrow down"></i></p>
+                                <div class="arrow-up"></div>
+                                <div class="arrow-down"></div>
                             </div>
                             {!! \Collective\Html\FormFacade::close() !!}
                         @endforeach
