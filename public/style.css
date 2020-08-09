@@ -228,18 +228,12 @@ ul.nav.navbar-nav > li > a {
 }
 
 
-.navbar .nav-item:not(:last-child) {
-    margin-right: 35px;
+@media all and (min-width: 992px) {
+    .navbar-nav .nav-item .dropdown-menu{ display: none; }
+    .navbar-nav .nav-item:hover .nav-link{ color: #fff;  }
+    .navbar-nav.nav-item:hover .dropdown-menu{ display: block; }
+    .navbar-nav .nav-item .dropdown-menu{ margin-top:0; }
 }
-
-.dropdown-toggle::after {
-    transition: transform 0.15s linear;
-}
-
-.show.dropdown .dropdown-toggle::after {
-    transform: translateY(3px);
-}
-
 
 .not-found h1 {
     color: #3e3d3d;

@@ -60,10 +60,8 @@
                $('.wrapper').toggleClass("toggle");
             });
 
-            $('ul.navbar-nav li.nav-item.dropdown a#navbarDropdown.nav-link').on('mouseover', function() {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
-            }, function() {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+            $('ul.navbar-nav li.nav-item.dropdown a#navbarDropdown.nav-link').hover(function() {
+                alert("kok");
             });
 
         });
