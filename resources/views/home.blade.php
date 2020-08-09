@@ -8,12 +8,25 @@
 
     <style>
 
-        #hero {
-            background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
+        #hero{
             height: 100vh;
             width: 100%;
             background-size: cover;
         }
+
+        #hero {
+            background: url({{asset('img/images/'.$image->img)}}) no-repeat center center;
+        }
+
+        @media only screen and (min-width: 992px) {
+            #hero {
+                background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
+
+            }
+        }
+
+
+
     </style>
 
     <section id="hero">
