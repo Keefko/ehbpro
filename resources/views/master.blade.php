@@ -61,7 +61,7 @@
             });
 
             $('ul.navbar-nav li.nav-item.dropdown a#navbarDropdown.nav-link').hover(function() {
-                alert("kok");
+                
             });
 
         });
