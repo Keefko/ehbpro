@@ -8,7 +8,7 @@
              <div class="col-md-5 pt-3" data-aos="fade-up-right">
                  <p>{!! $section->text !!}</p>
              </div>
-            <div class="col-md-7" data-aos="fade-up-left">
+            <div class="col-md-7" data-aos="fade-up">
                 {!!  \Collective\Html\FormFacade::open(['action' => 'MailController@postContact', 'method' => 'POST'])  !!}
                 <div class="row">
                     <div class="col-md-6">
