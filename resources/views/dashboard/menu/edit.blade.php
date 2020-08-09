@@ -46,7 +46,7 @@
                                     {{ \Collective\Html\FormFacade::label('url', 'Url' , ['class' => 'form-control-label']) }}
                                     {{ \Collective\Html\FormFacade::text('url', '', ['class' => 'form-control description']) }}
                                 </div>
-                                {!! \Collective\Html\FormFacade::hidden('id', $id) !!}
+                                {!! \Collective\Html\FormFacade::hidden('id', $menu->id) !!}
 
                                 <button type="submit" class="btn pl-3 btn-custom mt-2 mb-2">Vytvoriť podmenu</button>
                                 {!! \Collective\Html\FormFacade::close() !!}
