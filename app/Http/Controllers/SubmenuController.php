@@ -58,11 +58,11 @@ class SubmenuController extends Controller
         $submenuLower = Submenu::where('order', $order)->where('parent', $id);
         $submenuHigher = Submenu::where('order', $order-1)->where('parent', $id);
 
-        $submenuLower->toQuery()->update([
+        $submenuLower->update([
            'order' => $order-1,
         ]);
 
-        $submenuHigher->toQuery()->update([
+        $submenuHigher->update([
             'order' => $order,
         ]);
 
