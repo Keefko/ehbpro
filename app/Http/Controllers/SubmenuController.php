@@ -55,8 +55,7 @@ class SubmenuController extends Controller
     }
 
     public function up($order){
-        Submenu::where('order', $order)->update(['order',0]);
-        return redirect()->back()->with('success', 'Poradie bolo zmenené');
+        return Submenu::where('order', $order)->get();
     }
 
     public function down($order){
