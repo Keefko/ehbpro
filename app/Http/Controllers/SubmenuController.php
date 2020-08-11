@@ -57,16 +57,20 @@ class SubmenuController extends Controller
     public function up($order){
         $submenu = Submenu::where('order',$order)->get();
         $submenu2 = Submenu::where('order', $order-1)->get();
-        $submenu->update(['order' => $order-1]);
-        $submenu2->update(['order' => $order]);
+        $submenu->order = $order-1;
+        $submenu2->order = $order;
+        $submenu2->save();
+        $submenu->save();
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
     public function down($order){
         $submenu = Submenu::where('order',$order)->get();
         $submenu2 = Submenu::where('order', $order+1)->get();
-        $submenu->update(['order' => $order+1]);
-        $submenu2->update(['order' => $order]);
+        $submenu->order = $order+1;
+        $submenu2->order = $order;
+        $submenu2->save();
+        $submenu->save();
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 

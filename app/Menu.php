@@ -13,6 +13,6 @@ class Menu extends Model
     private $url;
 
     public function submenus(){
-        return $this->hasMany('App\Submenu', 'parent');
+        return $this->hasMany('App\Submenu', 'parent')->orderBy('order');
     }
 }
