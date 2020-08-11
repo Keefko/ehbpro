@@ -78,24 +78,64 @@
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
                                 @if($submenu->order != 1)
-                                    <button class="btn btn-custom" id="up" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();"><i class="arrow-up"></i></button>
+                                    <meta name="crsf-token" content="{{crsf_token()}}">
+                                    <button class="btn btn-custom" id="up" data-id="{{$submenu->order}}"><i class="arrow-up"></i></button>
                                 @endif
                                 <b class="pl-2 pr-2">{{$submenu->order}}</b>
                                 @if($submenu->order != count($menu->submenus))
-                                        <button class="btn btn-custom" id="down" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();"><i class="arrow-down"></i></button>
+                                        <meta name="crsf-token" content="{{crsf_token()}}">
+                                        <button class="btn btn-custom" id="down" data-id="{{$submenu->order}}"><i class="arrow-down"></i></button>
                                 @endif
-                                <button class="btn btn-custom" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();">Vymazať</button>
+                                <meta name="crsf-token" content="{{crsf_token()}}">
+                                <button class="btn btn-custom" id="delete" data-id="{{$submenu->id}}">Vymazať</button>
 
-                {{--                 <form id="frm-delete" action=" {{route('submenu/'. $submenu->id)}}" method="DELETE" style="display: none;">
-                                        {{ csrf_field() }}
-                                 </form>--}}
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#up").click(function () {
+                                            var order = $(this).data("id");
+                                            var token = $("meta[name='crsf-token']").attr('content');
 
-                                 <form id="frm-up" action=" {{route('submenu/up/'. $submenu->order)}}" method="PUT" style="display: none;">
-                                    {{ csrf_field() }}
-                                 </form>
-                                 <form id="frm-down" action=" {{route('submenu/down/'. $submenu->order)}}" method="PUT" style="display: none;">
-                                    {{ csrf_field() }}
-                                 </form>
+                                            $.ajax({
+                                                url : "submenu/up/" + order,
+                                                type : "PUT",
+                                                data: { "order" : order , "token" : token},
+                                                success: function () {
+
+                                                }
+                                            });
+                                        });
+
+                                        $("#down").click(function () {
+                                            var order = $(this).data("id");
+                                            var token = $("meta[name='crsf-token']").attr('content');
+
+                                            $.ajax({
+                                                url : "submenu/down/" + order,
+                                                type : "PUT",
+                                                data: { "order" : order , "token" : token},
+                                                success: function () {
+
+                                                }
+                                            });
+                                        });
+
+                                        $("#delete").click(function () {
+                                            var order = $(this).data("id");
+                                            var token = $("meta[name='crsf-token']").attr('content');
+
+                                            $.ajax({
+                                                url : "submenu/" + id,
+                                                type : "DELETE",
+                                                data: { "id" : id , "token" : token},
+                                                success: function () {
+
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+
+
                             </div>
                         </div>
                         @endforeach
