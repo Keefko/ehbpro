@@ -66,12 +66,12 @@ Route::get('/dashboard/menu/create',function (){
 });
 
 
-Route::put('/submenu/up/{order}/{id}',[
+Route::put('/submenu/up/{order}',[
     'as' => 'submenu.up',
     'uses' => 'SubmenuController@up',
 ]);
 
-Route::put('/submenu/create/{order}/{id}',[
+Route::put('/submenu/create/{order}',[
     'as' => 'submenu.down',
     'uses' => 'SubmenuController@down',
 ]);
