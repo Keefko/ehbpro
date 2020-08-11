@@ -79,7 +79,7 @@
                             <div>
                                 @if($submenu->order != 1)
                                     <meta name="crsf-token" content="{{csrf_field()}}">
-                                    <button class="btn btn-custom" id="up" data-id="{{$submenu->order}}"><i class="arrow-up"></i></button>
+                                    <button class="btn btn-custom" id="up" value="{{$submenu->order}}"><i class="arrow-up"></i></button>
                                 @endif
                                 <b class="pl-2 pr-2">{{$submenu->order}}</b>
                                 @if($submenu->order != count($menu->submenus))
@@ -92,7 +92,7 @@
                                 <script>
                                     $(document).ready(function () {
                                         $("#up").click(function () {
-                                            var order = $(this).data("id");
+                                            var order = $(this).val();
                                             var token = $("meta[name='crsf-token']").attr('content');
 
                                             $.ajax({
@@ -120,7 +120,7 @@
                                         });
 
                                         $("#delete").click(function () {
-                                            var order = $(this).data("id");
+                                            var id = $(this).$(this).val();
                                             var token = $("meta[name='crsf-token']").attr('content');
 
                                             $.ajax({
