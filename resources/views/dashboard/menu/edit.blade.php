@@ -79,7 +79,7 @@
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
 
-                                <div class="row">
+                                {{--<div class="row">
                                     <div class="col-md-1">
                                         @if($submenu->order != 1)
                                             @csrf()
@@ -98,7 +98,7 @@
                                             {{\Collective\Html\FormFacade::submit('&#8595;', ['class' => 'btn btn-custom'])}}
                                             {!! \Collective\Html\FormFacade::close() !!}
                                         @endif
-                                    </div>
+                                    </div>--}}
                                     <div class="col-md-2">
                                         @csrf()
                                         {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@destroy', $submenu->id], 'method' => 'DELETE']) !!}
