@@ -81,12 +81,12 @@
 
                                 <div class="row">
                                     <div class="col-md-1">
-                                      {{--  @if($submenu->order != 1)
+                                        @if($submenu->order != 1)
                                             @csrf()
-                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@up', $submenu->order], 'method' => 'PUT']) !!}
+                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@up', $submenu->order, $menu->id], 'method' => 'PUT']) !!}
                                             {{\Collective\Html\FormFacade::submit('&#8593;', ['class' => 'btn btn-custom'])}}
                                             {!! \Collective\Html\FormFacade::close() !!}
-                                        @endif--}}
+                                        @endif
                                     </div>
                                     <div class="col-md-1">
                                         <b class="pl-2 pr-2">{{$submenu->order}}</b>
@@ -94,7 +94,7 @@
                                     <div class="col-md-1">
                                         @if($submenu->order != count($menu->submenus))
                                             @csrf()
-                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@down', $submenu->order], 'method' => 'PUT']) !!}
+                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@down', $submenu->order, $menu->id], 'method' => 'PUT']) !!}
                                             {{\Collective\Html\FormFacade::submit('&#8595;', ['class' => 'btn btn-custom'])}}
                                             {!! \Collective\Html\FormFacade::close() !!}
                                         @endif
