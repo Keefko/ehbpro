@@ -65,7 +65,7 @@ class SubmenuController extends Controller
         $submenu2->order = $order;
 
 
-        return json_encode($submenu);
+        return json_encode($submenu2);
         //return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
