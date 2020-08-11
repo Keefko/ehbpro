@@ -122,7 +122,7 @@
                                         $("#delete").click(function () {
                                             var id = $(this).$(this).val();
                                             var token = $("meta[name='crsf-token']").attr('content');
-
+                                            console.log(id);
                                             $.ajax({
                                                 url : "submenu/" + id,
                                                 type : "DELETE",
