@@ -78,17 +78,24 @@
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
                                 @if($submenu->order != 1)
-                                    <button class="btn btn-custom" id="up"><i class="arrow-up"></i></button>
+                                    <button class="btn btn-custom" id="up" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();"><i class="arrow-up"></i></button>
                                 @endif
                                 <b class="pl-2 pr-2">{{$submenu->order}}</b>
                                 @if($submenu->order != count($menu->submenus))
-                                        <button class="btn btn-custom" id="down"><i class="arrow-down"></i></button>
+                                        <button class="btn btn-custom" id="down" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();"><i class="arrow-down"></i></button>
                                 @endif
+                                <button class="btn btn-custom" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();">Vymazať</button>
 
-                                @csrf()
-                                {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@destroy', $submenu->id], 'method' => 'DELETE']) !!}
-                                    {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom ml-2'])}}
-                                {!! \Collective\Html\FormFacade::close() !!}
+                                 <form id="frm-delete" action=" {{action(['SubmenuController@destroy', $submenu->id])}}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                 </form>
+
+                                 <form id="frm-up" action=" {{action(['SubmenuController@up', $submenu->order])}}" method="PUT" style="display: none;">
+                                    {{ csrf_field() }}
+                                 </form>
+                                 <form id="frm-down" action=" {{action(['SubmenuController@down', $submenu->order])}}" method="PUT" style="display: none;">
+                                    {{ csrf_field() }}
+                                 </form>
                             </div>
                         </div>
                         @endforeach
