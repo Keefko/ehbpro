@@ -42,7 +42,7 @@ class SubmenuController extends Controller
         $submenu->title = $request->input('title');
         $submenu->url = $request->input('url');
         $submenu->order = $request->input('order');
-        $submenu->parent = $request->input('id');
+        $submenu->parent = $request->input('parent');
         $submenu->save();
 
         return redirect()->back()->with('success', 'Podmenu bolo úspešne upravené');

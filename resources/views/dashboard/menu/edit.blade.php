@@ -73,7 +73,8 @@
                                 {{ \Collective\Html\FormFacade::label('url', 'Url', ['class' => 'form-control-label']) }}
                                 {{ \Collective\Html\FormFacade::text('url', $submenu->url, ['class' => 'form-control','required' => 'true']) }}
                             </div>
-
+                            {!! \Collective\Html\FormFacade::hidden('order', $submenu->order) !!}
+                            {!! \Collective\Html\FormFacade::hidden('parent', $menu->id) !!}
                             <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
