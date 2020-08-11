@@ -59,9 +59,11 @@ class SubmenuController extends Controller
     }
 
     public function up($order,$id){
-        $this->reorder(Submenu::whereIn('order', $order)->where('parent', $id), 0);
-        $this->reorder(Submenu::whereIn('order', --$order)->where('parent', $id), $order);
-        $this->reorder(Submenu::whereIn('order', 0)->where('parent', $id), --$order);
+
+        $submenu = Submenu::where('order', $order)->where('parent', $id)->get();
+        $submenu2 = Submenu::where('order', --$order)->where('parent', $id)->get();
+        $this->reorder($submenu2, $order);
+        $this->reorder($submenu, --$order);
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
