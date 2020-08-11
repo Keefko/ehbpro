@@ -87,7 +87,7 @@
                                         <button class="btn btn-custom" id="down" data-id="{{$submenu->order}}"><i class="arrow-down"></i></button>
                                 @endif
                                 <meta name="crsf-token" content="{{csrf_field()}}">
-                                <button class="btn btn-custom" id="delete" data-id="{{$submenu->id}}">Vymazať</button>
+                                <button class="btn btn-custom" id="delete" value="{{$submenu->id}}">Vymazať</button>
 
                                 <script>
                                     $(document).ready(function () {
