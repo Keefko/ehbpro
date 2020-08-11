@@ -60,9 +60,10 @@ class SubmenuController extends Controller
 
         $submenu->order = $order-1;
         $submenu2->order = $order;
-        return $submenu;
+
         $submenu->save();
         $submenu2->save();
+        return $submenu;
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
