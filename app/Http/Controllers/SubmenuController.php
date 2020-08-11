@@ -59,14 +59,14 @@ class SubmenuController extends Controller
     }
 
     public function up($order,$id){
-        reorder(Submenu::where('order', $order)->where('parent', $id), --$order);
-        reorder(Submenu::where('order', --$order)->where('parent', $id), $order);
+        $this->reorder(Submenu::where('order', $order)->where('parent', $id), --$order);
+        $this->reorder(Submenu::where('order', --$order)->where('parent', $id), $order);
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
     public function down($order,$id){
-        reorder(Submenu::where('order', $order)->where('parent', $id), ++$order);
-        reorder(Submenu::where('order', ++$order)->where('parent', $id), $order);
+        $this->reorder(Submenu::where('order', $order)->where('parent', $id), ++$order);
+        $this->reorder(Submenu::where('order', ++$order)->where('parent', $id), $order);
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
