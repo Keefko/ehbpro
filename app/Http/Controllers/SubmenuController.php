@@ -69,7 +69,7 @@ class SubmenuController extends Controller
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
-    public function down($order){
+    public function down($order,$id){
 
     }
 
