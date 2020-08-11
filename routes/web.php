@@ -26,7 +26,7 @@ Route::resource('service', 'ServiceController');
 Route::resource('page', 'PageController');
 Route::resource('image', 'ImageController');
 Route::resource('mail', 'MailController');
-Route::resource('submenu', 'SubmenuController',['excerpt' => 'create']);
+Route::resource('submenu', 'SubmenuController',['excerpt' => 'up , down']);
 
 Route::get('/', function () {
     return view('home');
@@ -65,9 +65,15 @@ Route::get('/dashboard/menu/create',function (){
     return view('dashboard.menu.create');
 });
 
-Route::get('/submenu/create/{id}',[
-    'as' => 'submenu.create',
-    'uses' => 'SubmenuController@create',
+
+Route::put('/submenu/up/{order}',[
+    'as' => 'submenu.up',
+    'uses' => 'SubmenuController@up',
+]);
+
+Route::put('/submenu/create/{order}',[
+    'as' => 'submenu.down',
+    'uses' => 'SubmenuController@down',
 ]);
 
 

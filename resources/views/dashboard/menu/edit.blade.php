@@ -86,14 +86,14 @@
                                 @endif
                                 <button class="btn btn-custom" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();">Vymazať</button>
 
-                                 <form id="frm-delete" action=" {{action(['SubmenuController@destroy', $submenu->id])}}" method="POST" style="display: none;">
+                                 <form id="frm-delete" action=" {{route('submenu/'. $submenu->id)}}" method="DELETE" style="display: none;">
                                         {{ csrf_field() }}
                                  </form>
 
-                                 <form id="frm-up" action=" {{action(['SubmenuController@up', $submenu->order])}}" method="PUT" style="display: none;">
+                                 <form id="frm-up" action=" {{route('submenu/up/'. $submenu->order)}}" method="PUT" style="display: none;">
                                     {{ csrf_field() }}
                                  </form>
-                                 <form id="frm-down" action=" {{action(['SubmenuController@down', $submenu->order])}}" method="PUT" style="display: none;">
+                                 <form id="frm-down" action=" {{route('submenu/down/'. $submenu->order)}}" method="PUT" style="display: none;">
                                     {{ csrf_field() }}
                                  </form>
                             </div>
