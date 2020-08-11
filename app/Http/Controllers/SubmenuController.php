@@ -54,8 +54,8 @@ class SubmenuController extends Controller
         return redirect()->back()->with('success', 'Podmenu bolo úspešne zmazané');
     }
 
-    public function up($order){
-        return Submenu::where('order', $order)->get();
+    public function up($order,$id){
+        return Submenu::where('order', $order)->where('parent', $id)->get();
     }
 
     public function down($order){
