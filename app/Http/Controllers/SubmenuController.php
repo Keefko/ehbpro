@@ -55,7 +55,10 @@ class SubmenuController extends Controller
     }
 
     public function up($order,$id){
-        return Submenu::where('order', $order)->where('parent', $id)->get();
+        $submenu = Submenu::where('order', $order)->where('parent', $id)->get();
+        $submenu->order = 0;
+        $submenu->save();
+        return $submenu;
     }
 
     public function down($order){
