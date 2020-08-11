@@ -59,8 +59,8 @@ class SubmenuController extends Controller
         $submenu2 = Submenu::where('order', $order-1)->get();
         $submenu->order = $order-1;
         $submenu2->order = $order;
-        $submenu2->save();
-        $submenu->save();
+        $submenu2->update();
+        $submenu->update();
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
@@ -69,8 +69,8 @@ class SubmenuController extends Controller
         $submenu2 = Submenu::where('order', $order+1)->get();
         $submenu->order = $order+1;
         $submenu2->order = $order;
-        $submenu2->save();
-        $submenu->save();
+        $submenu2->update();
+        $submenu->update();
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
