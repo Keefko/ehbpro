@@ -83,7 +83,7 @@
                                     <div class="col-md-1">
                                         @if($submenu->order != 1)
                                             @csrf()
-                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@up', $submenu->id, ], 'method' => 'PUT']) !!}
+                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@up', $submenu->order], 'method' => 'PUT']) !!}
                                             {{\Collective\Html\FormFacade::submit('&#8593;', ['class' => 'btn btn-custom'])}}
                                             {!! \Collective\Html\FormFacade::close() !!}
                                         @endif
