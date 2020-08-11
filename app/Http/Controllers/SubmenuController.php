@@ -64,10 +64,8 @@ class SubmenuController extends Controller
         $submenu->order = --$order;
         $submenu2->order = $order;
 
-        $arr = array_push($submenu2);
-        $arr = array_push($submenu);
 
-        return $arr;
+        return json_encode(array_merge($submenu,$submenu2));
         //return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
