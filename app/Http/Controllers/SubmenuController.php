@@ -54,20 +54,19 @@ class SubmenuController extends Controller
         return redirect()->back()->with('success', 'Podmenu bolo úspešne zmazané');
     }
 
-    public function reorder($submenu, $value){
-        $submenu->update(['order' => $value]);
-    }
 
     public function up($order,$id){
 
         $submenu = Submenu::where('order', $order)->where('parent', $id)->get();
         $submenu2 = Submenu::where('order', --$order)->where('parent', $id)->get();
-        $this->reorder($submenu2, $order);
-        $this->reorder($submenu, --$order);
+
+
+        $submenu->order = --$order;
+        $submenu2->order = $order;
 
         dd($submenu);
         dd($submenu2);
-        return redirect()->back()->with('success', 'Poradie bolo zmenené');
+        //return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
     public function down($order,$id){
