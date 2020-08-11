@@ -64,8 +64,10 @@ class SubmenuController extends Controller
         $submenu->order = --$order;
         $submenu2->order = $order;
 
-        dd($submenu);
-        dd($submenu2);
+        $arr = array_push($submenu2);
+        $arr = array_push($submenu);
+
+        return $arr;
         //return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
