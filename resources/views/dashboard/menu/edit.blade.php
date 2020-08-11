@@ -77,65 +77,34 @@
                             <button type="submit" class="btn btn-custom mt-2 mb-2">Upraviť</button>
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
-                                @if($submenu->order != 1)
-                                    <meta name="crsf-token" content="{{csrf_field()}}">
-                                    <button class="btn btn-custom" id="up" value="{{$submenu->order}}"><i class="arrow-up"></i></button>
-                                @endif
-                                <b class="pl-2 pr-2">{{$submenu->order}}</b>
-                                @if($submenu->order != count($menu->submenus))
-                                        <meta name="crsf-token" content="{{csrf_field()}}">
-                                        <button class="btn btn-custom" id="down" data-id="{{$submenu->order}}"><i class="arrow-down"></i></button>
-                                @endif
-                                <meta name="crsf-token" content="{{csrf_field()}}">
-                                <button class="btn btn-custom" id="delete" value="{{$submenu->id}}">Vymazať</button>
 
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#up").click(function () {
-                                            var order = $(this).val();
-                                            var token = $("meta[name='crsf-token']").attr('content');
-
-                                            $.ajax({
-                                                url : "submenu/up/" + order,
-                                                type : "PUT",
-                                                data: { "order" : order , "token" : token},
-                                                success: function () {
-
-                                                }
-                                            });
-                                        });
-
-                                        $("#down").click(function () {
-                                            var order = $(this).data("id");
-                                            var token = $("meta[name='crsf-token']").attr('content');
-
-                                            $.ajax({
-                                                url : "submenu/down/" + order,
-                                                type : "PUT",
-                                                data: { "order" : order , "token" : token},
-                                                success: function () {
-
-                                                }
-                                            });
-                                        });
-
-                                        $("#delete").click(function () {
-                                            var id = $(this).$(this).val();
-                                            var token = $("meta[name='crsf-token']").attr('content');
-                                            console.log(id);
-                                            $.ajax({
-                                                url : "submenu/" + id,
-                                                type : "DELETE",
-                                                data: { "id" : id , "token" : token},
-                                                success: function () {
-
-                                                }
-                                            });
-                                        });
-                                    });
-                                </script>
-
-
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        @if($submenu->order != 1)
+                                            @csrf()
+                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@up', $submenu->order], 'method' => 'PUT']) !!}
+                                            {{\Collective\Html\FormFacade::submit('&#8593;', ['class' => 'btn btn-custom'])}}
+                                            {!! \Collective\Html\FormFacade::close() !!}
+                                        @endif
+                                    </div>
+                                    <div class="col-md-3">
+                                        <b class="pl-2 pr-2">{{$submenu->order}}</b>
+                                    </div>
+                                    <div class="col-md-3">
+                                        @if($submenu->order != count($menu->submenus))
+                                            @csrf()
+                                            {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@down', $submenu->order], 'method' => 'PUT']) !!}
+                                            {{\Collective\Html\FormFacade::submit('&#8595;', ['class' => 'btn btn-custom'])}}
+                                            {!! \Collective\Html\FormFacade::close() !!}
+                                        @endif
+                                    </div>
+                                    <div class="col-md-3">
+                                        @csrf()
+                                        {!! \Collective\Html\FormFacade::open(['action' => ['SubmenuController@destroy', $submenu->id], 'method' => 'DELETE']) !!}
+                                        {{\Collective\Html\FormFacade::submit('Vymazať', ['class' => 'btn btn-custom'])}}
+                                        {!! \Collective\Html\FormFacade::close() !!}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         @endforeach
