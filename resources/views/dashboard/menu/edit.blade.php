@@ -78,15 +78,15 @@
                             {!! \Collective\Html\FormFacade::close() !!}
                             <div>
                                 @if($submenu->order != 1)
-                                    <meta name="crsf-token" content="{{crsf_token()}}">
+                                    <meta name="crsf-token" content="{{csrf_field()}}">
                                     <button class="btn btn-custom" id="up" data-id="{{$submenu->order}}"><i class="arrow-up"></i></button>
                                 @endif
                                 <b class="pl-2 pr-2">{{$submenu->order}}</b>
                                 @if($submenu->order != count($menu->submenus))
-                                        <meta name="crsf-token" content="{{crsf_token()}}">
+                                        <meta name="crsf-token" content="{{csrf_field()}}">
                                         <button class="btn btn-custom" id="down" data-id="{{$submenu->order}}"><i class="arrow-down"></i></button>
                                 @endif
-                                <meta name="crsf-token" content="{{crsf_token()}}">
+                                <meta name="crsf-token" content="{{csrf_field()}}">
                                 <button class="btn btn-custom" id="delete" data-id="{{$submenu->id}}">Vymazať</button>
 
                                 <script>
