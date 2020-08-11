@@ -86,9 +86,9 @@
                                 @endif
                                 <button class="btn btn-custom" onclick="event.preventDefault(); document.getElementById('frm-delete').submit();">Vymazať</button>
 
-                                 <form id="frm-delete" action=" {{route('submenu/'. $submenu->id)}}" method="DELETE" style="display: none;">
+                {{--                 <form id="frm-delete" action=" {{route('submenu/'. $submenu->id)}}" method="DELETE" style="display: none;">
                                         {{ csrf_field() }}
-                                 </form>
+                                 </form>--}}
 
                                  <form id="frm-up" action=" {{route('submenu/up/'. $submenu->order)}}" method="PUT" style="display: none;">
                                     {{ csrf_field() }}
