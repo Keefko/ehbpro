@@ -64,6 +64,9 @@ class SubmenuController extends Controller
         $submenu2 = Submenu::where('order', --$order)->where('parent', $id)->get();
         $this->reorder($submenu2, $order);
         $this->reorder($submenu, --$order);
+
+        dd($submenu);
+        dd($submenu2);
         return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
