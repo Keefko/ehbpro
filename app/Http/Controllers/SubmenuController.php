@@ -59,14 +59,27 @@ class SubmenuController extends Controller
 
         $submenu = Submenu::where('order', $order)->where('parent', $id)->get();
         $submenu2 = Submenu::where('order', --$order)->where('parent', $id)->get();
+        $data = array();
 
 
-        $submenu->order = --$order;
-        $submenu2->order = $order;
+        array_push($data, array(
+            'id'=> $submenu->id,
+            'title' => $submenu->title,
+            'url' => $submenu->url,
+            'order' => --$order,
+            'parent' => $id
+        ));
 
+        array_push($data, array(
+            'id'=> $submenu2->id,
+            'title' => $submenu2->title,
+            'url' => $submenu2->url,
+            'order' => $order,
+            'parent' => $id
+        ));
 
-        return json_encode($submenu2);
-        //return redirect()->back()->with('success', 'Poradie bolo zmenené');
+        Submenu::insert($data);
+        return redirect()->back()->with('success', 'Poradie bolo zmenené');
     }
 
     public function down($order,$id){
