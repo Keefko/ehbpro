@@ -21,8 +21,4 @@
                 <script>window.location = "/";</script>
     @endif
 @endsection
-
-@push('scripts')
-    {!! \Harimayco\Menu\Facades\Menu::scripts() !!}
-@endpush
 </body>
