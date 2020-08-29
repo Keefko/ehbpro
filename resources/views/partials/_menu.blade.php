@@ -5,6 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="bs-slide-dropdown">
+            <?php $public_menu = Menu::getByName('Main'); ?>
             @if($public_menu)
             <ul class="navbar-nav ml-auto">
                 @foreach($public_menu as $menu)
