@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
         view()->composer('partials._service', function ($view) {
             $view->with('section', Section::findOrFail(1));
         });
