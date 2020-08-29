@@ -91,9 +91,9 @@ class AppServiceProvider extends ServiceProvider
             $view->with('list', Lists::all());
         });
 
-        view()->composer('dashboard.menu', function ($view) {
+     /*   view()->composer('dashboard.menu', function ($view) {
             $view->with('menu', Menu::all());
-        });
+        });*/
 
         view()->composer('dashboard.user', function ($view) {
             $view->with('user', User::all());
