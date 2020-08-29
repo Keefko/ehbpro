@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
-Route::resource('menu', 'MenuController');
+
 Route::resource('about', 'AboutController');
 Route::resource('section', 'SectionController');
 Route::resource('user', 'UserController');
@@ -26,7 +26,7 @@ Route::resource('service', 'ServiceController');
 Route::resource('page', 'PageController');
 Route::resource('image', 'ImageController');
 Route::resource('mail', 'MailController');
-Route::resource('submenu', 'SubmenuController',['excerpt' => 'up , down']);
+
 
 Route::get('/', function () {
     return view('home');
@@ -55,8 +55,6 @@ Route::get('/dashboard/page',function (){
     return view('dashboard.page');
 });
 
-Route::get('/getSubmenu/{id}', 'MenuController@getSubmenu')->name('getSubmenu');
-
 
 Route::get('/dashboard/menu',function (){
     return view('dashboard.menu');
@@ -69,22 +67,6 @@ Route::get('/dashboard/list',function (){
 Route::get('/dashboard/service',function (){
     return view('dashboard.service');
 });
-
-Route::get('/dashboard/menu/create',function (){
-    return view('dashboard.menu.create');
-});
-
-
-Route::put('/submenu/up/{order}/{id}',[
-    'as' => 'submenu.up',
-    'uses' => 'SubmenuController@up',
-]);
-
-Route::put('/submenu/create/{order}/{id}',[
-    'as' => 'submenu.down',
-    'uses' => 'SubmenuController@down',
-]);
-
 
 Route::get('/dashboard/service/create',function (){
     return view('dashboard.service.create');
@@ -108,10 +90,6 @@ Route::get('/dashboard/list/create',function (){
 
 Route::get('/dashboard/user/{{$user->id}}/edit',function (){
     return view('dashboard.user.edit');
-});
-
-Route::get('/dashboard/menu/{{$menu->id}}/edit', function (){
-    return view('dashboard.menu.edit');
 });
 
 Route::get('/dashboard/about/{{$about->id}}/edit', function (){

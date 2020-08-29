@@ -23,15 +23,15 @@
     <script>
         var menus = {
             "oneThemeLocationNoMenus" : "",
-            "moveUp" : "Move up",
-            "moveDown" : "Mover down",
-            "moveToTop" : "Move top",
-            "moveUnder" : "Move under of %s",
+            "moveUp" : "Posun hore",
+            "moveDown" : "Posun dole",
+            "moveToTop" : "Posun navrh",
+            "moveUnder" : "Posun na spodok %s",
             "moveOutFrom" : "Out from under  %s",
             "under" : "Under %s",
             "outFrom" : "Out from %s",
-            "menuFocus" : "%1$s. Element menu %2$d of %3$d.",
-            "subMenuFocus" : "%1$s. Menu of subelement %2$d of %3$s."
+            "menuFocus" : "%1$s. Položka menu %2$d  %3$d.",
+            "subMenuFocus" : "%1$s. Podmenu %2$d  %3$s."
         };
         var arraydata = [];
         var addcustommenur= '{{ route("haddcustommenu") }}';
