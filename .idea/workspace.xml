@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d2ebea-be92-4946-a97c-3db428c3b7ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/2019_01_05_293551_add-role-id-to-menu-items-table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2017_08_11_073824_create_menus_wp_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2017_08_11_074006_create_menu_items_wp_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/images/spinner-2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/images/spinner.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/scripts2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/harimayco-menu/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/wmenu/menu-html.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/wmenu/scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ehbpro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ehbpro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubmenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubmenuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +207,7 @@
       <workItem from="1595533245819" duration="12186000" />
       <workItem from="1595777745899" duration="23122000" />
       <workItem from="1596738734704" duration="45733000" />
-      <workItem from="1598690692593" duration="920000" />
+      <workItem from="1598690692593" duration="1187000" />
     </task>
     <servers />
   </component>
