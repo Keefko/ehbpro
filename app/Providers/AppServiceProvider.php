@@ -33,11 +33,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        view()->composer('partials._menu', function ($view) {
-            $view->with('menu', Menu::all());
-        });
-
+        
         view()->composer('partials._service', function ($view) {
             $view->with('section', Section::findOrFail(1));
         });
@@ -91,9 +87,6 @@ class AppServiceProvider extends ServiceProvider
             $view->with('list', Lists::all());
         });
 
-     /*   view()->composer('dashboard.menu', function ($view) {
-            $view->with('menu', Menu::all());
-        });*/
 
         view()->composer('dashboard.user', function ($view) {
             $view->with('user', User::all());
