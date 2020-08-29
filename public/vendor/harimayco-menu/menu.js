@@ -49,7 +49,7 @@ function addcustommenu() {
       idmenu: $('#idmenu').val()
     },
 
-    url: addcustommenur,
+    url: addcustommenu,
     type: 'POST',
     success: function(response) {
       window.location.reload();
@@ -108,7 +108,7 @@ function updateitem(id = 0) {
   }
   $.ajax({
     data: data,
-    url: updateitemr,
+    url: updateitem,
     type: 'POST',
     beforeSend: function(xhr) {
       if (id) {
@@ -133,7 +133,7 @@ function actualizarmenu() {
       idmenu: $('#idmenu').val()
     },
 
-    url: generatemenucontrolr,
+    url: generatemenucontrol,
     type: 'POST',
     beforeSend: function(xhr) {
       $('#spincustomu2').show();
@@ -154,7 +154,7 @@ function deleteitem(id) {
       id: id
     },
 
-    url: deleteitemmenur,
+    url: deleteitemmenu,
     type: 'POST',
     success: function(response) {}
   });
@@ -170,7 +170,7 @@ function deletemenu() {
         id: $('#idmenu').val()
       },
 
-      url: deletemenugr,
+      url: deletemenug,
       type: 'POST',
       beforeSend: function(xhr) {
         $('#spincustomu2').show();
@@ -201,7 +201,7 @@ function createnewmenu() {
         menuname: $('#menu-name').val()
       },
 
-      url: createnewmenur,
+      url: createnewmenu,
       type: 'POST',
       success: function(response) {
         window.location = menuwr + '?menu=' + response.resp;

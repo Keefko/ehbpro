@@ -34,6 +34,15 @@ Route::get('/', function () {
 
 
 
+Route::post('/dashboard/menu/addcustommenu', array('as' => 'haddcustommenu', 'uses' => '\Harimayco\Menu\Controllers\MenuController@addcustommenu'));
+Route::post('/dashboard/menu//deleteitemmenu', array('as' => 'hdeleteitemmenu', 'uses' => '\Harimayco\Menu\Controllers\MenuController@deleteitemmenu'));
+Route::post('/dashboard/menu//deletemenug', array('as' => 'hdeletemenug', 'uses' => '\Harimayco\Menu\Controllers\MenuController@deletemenug'));
+Route::post('/dashboard/menu//createnewmenu', array('as' => 'hcreatenewmenu', 'uses' => '\Harimayco\Menu\Controllers\MenuController@createnewmenu'));
+Route::post('/dashboard/menu//generatemenucontrol', array('as' => 'hgeneratemenucontrol', 'uses' => '\Harimayco\Menu\Controllers\MenuController@generatemenucontrol'));
+Route::post('/dashboard/menu//updateitem', array('as' => 'hupdateitem', 'uses' => '\Harimayco\Menu\Controllers\MenuController@updateitem'));
+
+
+
 Route::post('partials._contact', 'MailController@postContact');
 
 Route::get('/{$slug}','PageController@show');
