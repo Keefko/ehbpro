@@ -9,8 +9,9 @@
     <style>
 
         #hero{
-            height: 100vh;
+            height: auto;
             width: 100%;
+            max-height:650px;
         }
         @media only screen and (min-width: 992px) {
             #hero {

@@ -20,7 +20,7 @@ $currentUrl = url()->current();
 									{!! Menu::select('menu', $menulist) !!}
 
 									<span class="submit-btn">
-										<input type="submit" class="button-secondary" value="Choose">
+										<input type="submit" class="button-secondary" value="Vybrať">
 									</span>
 									<span class="add-new-menu-action"> alebo <a href="{{ $currentUrl }}?action=edit&menu=0">Vytvorte nové menu</a>. </span>
 								</form>
