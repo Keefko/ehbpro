@@ -1,6 +1,6 @@
 
 <nav class="navbar  navbar-expand-lg navbar-light fixed-top" id="mainNav" role="navigation">
-        <a href="{{url('/')}}"><img  src="{{asset('img/images/'.$image->img)}}"/></a>
+        <a href="{{url('/')}}"><img  src="{{asset('img/images/'.$image->img)}}" style="max-height: 60px; width: 100%"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
