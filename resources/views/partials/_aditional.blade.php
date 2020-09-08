@@ -32,7 +32,7 @@
                             <p class="mt-4">{!! $section->text !!}</p>
                             <div class="row pt-3 pb-4">
                                 @foreach($list as $item)
-                                    @if($width < 992 && $width > 1150)
+                                    @if($width > 992 && $width < 1150)
                                         <div class="col-lg-6 col-md-6 col-sm-6 ">
                                             <div class="aditional-item" >{{$item->title}}</div>
                                         </div>
