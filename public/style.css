@@ -515,6 +515,10 @@ and (max-device-width: 1024px) {
     #about .img1 {
         display: none;
     }
+
+    #about .img2 {
+        width: 350px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
