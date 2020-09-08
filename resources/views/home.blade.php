@@ -9,11 +9,15 @@
     <style>
         #hero {
             position: relative;
-            height: 100vh;
+            height: 80vh;
             overflow: hidden;
             background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
             background-size: cover;
         }
+
+
+
+
     </style>
 
     <section id="hero">

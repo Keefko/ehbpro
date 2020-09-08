@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <div class="footer-form" data-aos="fade-right" style="background: url({{asset('img/images/'.$imageAdd->img)}}) no-repeat top center; background-size: cover; height: 30vh; min-height: 300px">
+                <div class="footer-form" data-aos="fade-right" style="background: url({{asset('img/images/'.$imageAdd->img)}}) no-repeat top center; background-size: cover; height: 100%; min-height: 300px">
                 </div>
             </div>
             <div class="col-lg-6">
