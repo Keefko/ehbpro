@@ -36,7 +36,7 @@
                             <p class="mt-4">{!! $section->text !!}</p>
                             <div class="row pt-3 pb-4" id="additional-block">
                                 @foreach($list as $item)
-                                    <div class="aditional-item" >{{$item->title}}</div>
+                                    <div><span  class="aditional-item">{{$item->title}}</span></div>
                                 @endforeach
                             </div>
                         </div>
