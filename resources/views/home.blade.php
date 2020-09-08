@@ -9,22 +9,11 @@
     <style>
         #hero {
             position: relative;
-            height: 600px;
+            height: 100vh;
             overflow: hidden;
             background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
             background-size: cover;
         }
-
-        {{--@media only screen and (min-width: 992px) {--}}
-        {{--   --}}
-        {{--}--}}
-
-        {{--#hero {--}}
-        {{--    background: url({{asset('img/images/'.$image->img)}}) no-repeat center center;--}}
-        {{--    background-size: cover;--}}
-        {{--}--}}
-
-
     </style>
 
     <section id="hero">
