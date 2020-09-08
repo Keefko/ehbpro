@@ -9,7 +9,7 @@
     <style>
         #hero {
             position: relative;
-            height: 90vh;
+            height: 100vh;
             overflow: hidden;
             background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
             background-size: cover;
