@@ -7,23 +7,22 @@
     @include('partials/_menu')
 
     <style>
-
-        #hero{
-            height: auto;
-            width: 100%;
-            max-height:650px;
-        }
-        @media only screen and (min-width: 992px) {
-            #hero {
-                background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
-                background-size: cover;
-            }
-        }
-
         #hero {
-            background: url({{asset('img/images/'.$image->img)}}) no-repeat center center;
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
             background-size: cover;
         }
+
+        {{--@media only screen and (min-width: 992px) {--}}
+        {{--   --}}
+        {{--}--}}
+
+        {{--#hero {--}}
+        {{--    background: url({{asset('img/images/'.$image->img)}}) no-repeat center center;--}}
+        {{--    background-size: cover;--}}
+        {{--}--}}
 
 
     </style>
