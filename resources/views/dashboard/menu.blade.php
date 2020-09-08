@@ -15,8 +15,8 @@
                         {!! \Harimayco\Menu\Facades\Menu::render() !!}
                     </div>
                 </div>
-            </div>--}}
-        </div>--}}
+            </div>
+        </div>
             @else
                 <script>window.location = "/";</script>
     @endif

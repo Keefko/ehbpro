@@ -1,6 +1,3 @@
-
-
-
 <section id="aditional" class="pt-5 mb-5">
     <div class="container-fluid">
         <div class="row">
@@ -13,9 +10,6 @@
                         height: 100%;
                         min-height: 300px;
                     }
-
-
-
                 </style>
 
                 <div class="footer-form" data-aos="fade-right" id="addImage">
@@ -24,24 +18,23 @@
             <div class="col-lg-6">
                 <div class="footer-form grey">
                     <div class="row">
-                        <?php $width = '<script>screen.width</script>'; ?>
-                        @if($width < 992)
-                                <div class="col-lg-10" data-aos="fade-up">
-                        @else
                             <div class="col-lg-10" data-aos="fade-left">
-                         @endif
                             <h1>{{$section->title}}</h1>
                             <h6>{{$section->sub_title}}</h6>
                             <p class="mt-4">{!! $section->text !!}</p>
                             <div class="row pt-3 pb-4">
                                 @foreach($list as $item)
-                                    {{$width}}
-                                    @if($width > 992 && $width < 1150)
-                                        <div class="col-lg-6 col-md-6 col-sm-6 ">
-                                            <div class="aditional-item" >{{$item->title}}</div>
-                                        </div>
-                                    @else
-                                        <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                    <script>
+                                        $(document).load(function () {
+                                            var x = screen.width;
+                                            if(x > 922 && x < 1150 ){
+                                                $("#additional-block").addClass('col-sm-6 col-md-6 col-lg-6');
+                                            }else {
+                                                $("#additional-block").addClass('col-sm-4 col-md-4 col-lg-4');
+                                            }
+                                        });
+                                    </script>
+                                        <div id="additional-block">
                                             <div class="aditional-item" >{{$item->title}}</div>
                                         </div>
                                     @endif
