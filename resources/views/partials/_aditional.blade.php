@@ -1,14 +1,3 @@
-{{--<script>--}}
-{{--    $(function () {--}}
-{{--        const x = screen.width;--}}
-{{--        if(x > 922 && x < 1150 ){--}}
-{{--            $("#additional-block div").addClass('col-sm-6 col-md-6 col-lg-6');--}}
-{{--        }else {--}}
-{{--            $("#additional-block div").addClass('col-sm-4 col-md-4 col-lg-4');--}}
-{{--        }--}}
-{{--    });--}}
-{{--</script>--}}
-
 
 <section id="aditional" class="pt-5 mb-5">
     <div class="container-fluid">
@@ -36,7 +25,7 @@
                             <p class="mt-4">{!! $section->text !!}</p>
                             <div class="row pt-3 pb-4" id="additional-block">
                                 @foreach($list as $item)
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
                                         <div  class="aditional-item">{{$item->title}}</div>
                                     </div>
                                 @endforeach
