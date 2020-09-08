@@ -17,9 +17,9 @@
     <script src="{{ secure_asset('js/ebh.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script type="text/javascript" src="{{asset('vendor/harimayco-menu/scripts.js')}}"></script>
-    <script type="text/javascript" src="{{asset('vendor/harimayco-menu/scripts2.js')}}"></script>
-    <script type="text/javascript" src="{{asset('vendor/harimayco-menu/menu.js')}}"></script>
+    <script type="text/javascript" src="{{secure_asset('vendor/harimayco-menu/scripts.js')}}"></script>
+    <script type="text/javascript" src="{{secure_asset('vendor/harimayco-menu/scripts2.js')}}"></script>
+    <script type="text/javascript" src="{{secure_asset('vendor/harimayco-menu/menu.js')}}"></script>
     <script>
         var menus = {
             "oneThemeLocationNoMenus" : "",

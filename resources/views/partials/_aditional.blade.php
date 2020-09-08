@@ -13,6 +13,9 @@
                         height: 100%;
                         min-height: 300px;
                     }
+
+
+
                 </style>
 
                 <div class="footer-form" data-aos="fade-right" id="addImage">
@@ -32,6 +35,7 @@
                             <p class="mt-4">{!! $section->text !!}</p>
                             <div class="row pt-3 pb-4">
                                 @foreach($list as $item)
+                                    {{$width}}
                                     @if($width > 992 && $width < 1150)
                                         <div class="col-lg-6 col-md-6 col-sm-6 ">
                                             <div class="aditional-item" >{{$item->title}}</div>
