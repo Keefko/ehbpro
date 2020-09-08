@@ -14,10 +14,6 @@
             background: url({{asset('img/images/'.$image->img)}}) no-repeat center;
             background-size: cover;
         }
-
-
-
-
     </style>
 
     <section id="hero">

@@ -4,7 +4,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="bs-slide-dropdown">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <?php $public_menu = Menu::getByName('Main'); ?>
             @if($public_menu)
             <ul class="navbar-nav ml-auto">
