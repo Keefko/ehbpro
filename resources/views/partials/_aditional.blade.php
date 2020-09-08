@@ -37,7 +37,6 @@
                                         <div id="additional-block">
                                             <div class="aditional-item" >{{$item->title}}</div>
                                         </div>
-                                    @endif
                                 @endforeach
                             </div>
                         </div>
