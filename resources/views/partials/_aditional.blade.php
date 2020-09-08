@@ -2,9 +2,9 @@
     $(function () {
         const x = screen.width;
         if(x > 922 && x < 1150 ){
-            $("#additional-block").addClass('col-sm-6 col-md-6 col-lg-6');
+            $("#additional-block div").addClass('col-sm-6 col-md-6 col-lg-6');
         }else {
-            $("#additional-block").addClass('col-sm-4 col-md-4 col-lg-4');
+            $("#additional-block div").addClass('col-sm-4 col-md-4 col-lg-4');
         }
     });
 </script>
@@ -34,9 +34,9 @@
                             <h1>{{$section->title}}</h1>
                             <h6>{{$section->sub_title}}</h6>
                             <p class="mt-4">{!! $section->text !!}</p>
-                            <div class="row pt-3 pb-4">
+                            <div class="row pt-3 pb-4" id="additional-block">
                                 @foreach($list as $item)
-                                        <div id="additional-block">
+                                        <div>
                                             <div class="aditional-item" >{{$item->title}}</div>
                                         </div>
                                 @endforeach
