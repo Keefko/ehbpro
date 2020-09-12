@@ -360,6 +360,11 @@ and (max-device-width: 1024px) {
 
 }
 
+
+#service .service-box {
+    margin-left: -10px;
+}
+
 #service .services .service-image img {
     display: none;
 }
