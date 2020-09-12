@@ -38,7 +38,7 @@
                             <h3>{{$item->title}}</h3>
                             <p>{!! $item->text !!}</p>
                         </div>
-                    @elseif(count($service) % 5 == 0){
+                    @elseif(count($service) % 5 == 0)
                         @if($count < 3)
                             <div class="col-md-6 col-sm-6 col-xs-12 service-box" data-aos="flip-up">
                                 <div class="row">
