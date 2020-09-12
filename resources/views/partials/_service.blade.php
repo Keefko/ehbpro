@@ -56,7 +56,7 @@
                                 </div>
 
                             </div>
-                            @if($count == 2)
+                            @if($count == 3)
                                  </div>
                                  <div class="row services">
                             @endif
