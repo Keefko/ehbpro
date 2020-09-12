@@ -79,7 +79,6 @@
                                 <p>{!! $item->text !!}</p>
                             </div>
                         @endif
-                    }
                     @elseif(count($service) % 2 == 0)
                         <div class="col-md-6 col-sm-6 col-xs-12 service-box" data-aos="flip-up">
                             <div class="row">
