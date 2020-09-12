@@ -362,7 +362,8 @@ and (max-device-width: 1024px) {
 
 
 #service .service-box {
-    margin-left: -10px;
+    margin-left: -15px;
+    padding-right:15px;
 }
 
 #service .services .service-image img {

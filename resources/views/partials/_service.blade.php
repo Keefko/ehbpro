@@ -56,6 +56,10 @@
                                 </div>
 
                             </div>
+                            @if($count == 2)
+                                 </div>
+                                 <div class="row services">
+                            @endif
                         @else
                             <div class="col-md-4 col-sm-6 col-xs-12 single-box" data-aos="flip-up">
 
