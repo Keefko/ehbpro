@@ -26,6 +26,7 @@
                                     background: url({{asset('img/service/'.$item->img)}}) no-repeat center;
                                     background-size:cover;
                                     height: 350px;
+                                    max-width: 430px;
                                 }
 
                                 #service .services .single-box:hover{
