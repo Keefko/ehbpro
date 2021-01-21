@@ -17,7 +17,7 @@
             @foreach($service as $item)
 
                     @if(count($service) % 2 == 0 && count($service) % 4 == 0)
-                        <div class="col-md-3 col-sm-6 col-xs-12 single-box" data-aos="flip-up">
+                        <div class="col-md-3 col-sm-6 col-xs-12 single-box mx-auto" data-aos="flip-up">
 
                             <h2>0{{ $count }}</h2>
 
